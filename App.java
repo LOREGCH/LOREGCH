@@ -1,5 +1,7 @@
 package co.edu.utp.misiontic2022.c2;
-import java.util.Scanner; 
+import java.util.Scanner;
+
+//import jdk.nashorn.internal.objects.NativeInt32Array; 
 
 /**
  * Hello world!
@@ -32,7 +34,7 @@ public class App {
         System.out.print("Introduzca valor de m: ");
         m = sc.nextInt();*/
         
-        System.out.print(numeroSinU(123456,2));
+        //System.out.print(numeroSinU(123456,2));
         
         /** double Km;
         Scanner sc = new Scanner(System.in);
@@ -68,6 +70,23 @@ public class App {
         System.out.print("Introduzca el divisor: ");
         n2 = sc.nextDouble();*/
         //System.out.println(DivisionNumeros(n1,n2));
+
+        Scanner sc = new Scanner(System.in);
+        int n1, n2, n3, H, M, S;
+        System.out.print("Introduzca primer número: ");
+        n1 = sc.nextInt();
+        System.out.print("Introduzca segundo número: ");
+        n2 = sc.nextInt();
+        System.out.print("Introduzca tercer número: ");
+        n3 = sc.nextInt();
+        
+        System.out.print("Introduzca hora: ");
+        H =  sc.nextInt();
+        System.out.print("Introduzca minutos: ");
+        M =  sc.nextInt();
+        System.out.print("Introduzca segundos: ");
+        S =  sc.nextInt();
+        
     }
     public static int NS(String FN){
         var indice=FN.indexOf('/');//devuelve la posición, del caracter, por medio de un entero, si no existe devuelve -1
@@ -152,8 +171,36 @@ public class App {
         }
         return e;
     }
-   
+
+    public static int numeromayor(int n1, int n2,int n3) 
+    {
+        if (n1 > n2) {
+            if (n1 > n3){ 
+                System.out.println("El mayor es: " + n1);                                             
+            } else { 
+                System.out.println("el mayor es: " + n3);     
+            }
+        } else if (n2 > n3) { 
+            System.out.println("el mayor es: " + n2);
+        } else {
+            System.out.println("el mayor es: " + n3);
+        }
+        int mx= n3;
+        return mx;
+    } 
+    public static int Hora(int H,int M,int S)
+    { 
+        if(H>=0 && H<24 && M>=0 && M<60 && S>=0 && S<60) {                                                        
+           System.out.println("Hora correcta");   
+        }  else {
+            System.out.println("Hora incorrecta");
+        }
+        int hr= H ;
+        return hr; 
+    }
+
     
+
 }
 
 
